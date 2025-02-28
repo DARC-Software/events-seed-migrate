@@ -6,6 +6,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface VenueMapper {
 
-    @Insert("INSERT INTO venues (name, address, phoneNumber) SELECT #{name}, #{address}, #{phoneNumber} FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM venues WHERE name = #{name})")
+    @Insert("INSERT INTO venue (name, address, phoneNumber) SELECT #{name}, #{address}, #{phoneNumber} FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM venues WHERE name = #{name})")
     void insertVenue(Venue venue);
 }
