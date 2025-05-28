@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.Instant;
 import java.util.Date;
 
 @Getter
@@ -14,8 +15,8 @@ import java.util.Date;
 public class Event {
     private Long id;
     private String name;
-    private Date startTime;
-    private Date endTime;
+    private Instant startTime;
+    private Instant endTime;
     private String type;
     private String host;
     private String room;
