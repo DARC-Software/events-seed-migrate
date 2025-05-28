@@ -7,6 +7,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface EventMapper {
 
-    @Insert("INSERT INTO event (name, startTime, endTime, type, host, room, venueId) SELECT #{name}, #{start_time}, #{end_time}, #{type}, #{host}, #{room}, #{venue_id} FROM event")
+    @Insert("INSERT INTO event (name, start_time, end_time, type, host, room, venue_id) VALUES #{name}, #{startTime}, #{endTime}, #{type}, #{host}, #{room}, #{venueId}")
     void insertEvent(Event event);
 }
