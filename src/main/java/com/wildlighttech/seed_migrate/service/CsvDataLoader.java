@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.time.Instant;
 import java.util.List;
 
 @Service
@@ -35,6 +36,7 @@ public class CsvDataLoader {
 
         List<Event> events = loadDataFromCsv("data/events.csv", Event.class);
         for (Event event: events) {
+            System.out.println(event.getStartTime());
             eventMapper.insertEvent(event);
         }
         System.out.println("Events inserted: " + events.size());
