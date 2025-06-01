@@ -36,7 +36,7 @@ public class CsvDataLoader {
 
         List<Event> events = loadDataFromCsv("data/events.csv", Event.class);
         for (Event event: events) {
-            System.out.println(event.getStartTime());
+            System.out.println(event.getStartTime() + ">...........................................");
             eventMapper.insertEvent(event);
         }
         System.out.println("Events inserted: " + events.size());
@@ -55,7 +55,6 @@ public class CsvDataLoader {
                     .build();
 
             List<T> data = csvToBean.parse();
-
             System.out.println("Parsed " + data.size() + " entries from " + csvPath);
             return data;
 
