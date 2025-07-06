@@ -1,9 +1,9 @@
-package com.wildlighttech.seed_migrate.event;
+package com.darcsoftware.seed_migrate.event;
 
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvCustomBindByName;
 import com.opencsv.bean.CsvDate;
-import com.wildlighttech.seed_migrate.utilities.InstantConverter;
+import com.darcsoftware.seed_migrate.utilities.InstantConverter;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

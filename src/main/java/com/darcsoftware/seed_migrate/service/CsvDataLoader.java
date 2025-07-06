@@ -1,11 +1,11 @@
-package com.wildlighttech.seed_migrate.service;
+package com.darcsoftware.seed_migrate.service;
 
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
-import com.wildlighttech.seed_migrate.event.Event;
-import com.wildlighttech.seed_migrate.event.EventMapper;
-import com.wildlighttech.seed_migrate.venue.VenueMapper;
-import com.wildlighttech.seed_migrate.venue.Venue;
+import com.darcsoftware.seed_migrate.event.Event;
+import com.darcsoftware.seed_migrate.event.EventMapper;
+import com.darcsoftware.seed_migrate.venue.VenueMapper;
+import com.darcsoftware.seed_migrate.venue.Venue;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.wildlighttech.seed_migrate.venue;
+package com.darcsoftware.seed_migrate.venue;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

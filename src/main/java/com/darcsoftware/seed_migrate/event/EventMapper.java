@@ -1,6 +1,6 @@
-package com.wildlighttech.seed_migrate.event;
+package com.darcsoftware.seed_migrate.event;
 
-import com.wildlighttech.seed_migrate.venue.Venue;
+import com.darcsoftware.seed_migrate.venue.Venue;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 
