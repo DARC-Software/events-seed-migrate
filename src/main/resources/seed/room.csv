@@ -1,0 +1,18 @@
+id,venueId,name
+1,1,Main Hall
+2,1,Lounge
+3,1,Rooftop
+4,1,Basement
+5,2,Main Hall
+6,2,Lounge
+7,3,Main Hall
+8,3,Lounge
+9,4,Main Hall
+10,4,Lounge
+11,4,Rooftop
+12,4,Basement
+13,5,Main Hall
+14,5,Lounge
+15,5,Rooftop
+16,6,Main Hall
+17,6,Lounge

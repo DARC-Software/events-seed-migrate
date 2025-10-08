@@ -1,37 +1,65 @@
 package com.darcsoftware.seed_migrate.event;
 
+import com.darcsoftware.seed_migrate.utilities.InstantConverter;
+import com.darcsoftware.seed_migrate.utilities.LocalDateTimeConverter;
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvCustomBindByName;
-import com.opencsv.bean.CsvDate;
-import com.darcsoftware.seed_migrate.utilities.InstantConverter;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.time.Instant;
-import java.util.Date;
+import java.time.LocalDateTime;
 
-@Getter
-@Setter
-@NoArgsConstructor
+@Data
 @AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Event {
+    @CsvBindByName(column = "id")
     private Long id;
-    @CsvBindByName(column = "name")
-    private String name;
-    @CsvBindByName(column = "start_time")
-    @CsvDate(value = "yyyy-MM-dd'T'HH:mm:ssX")
-    private Instant startTime;
-    @CsvBindByName(column = "end_time")
-    @CsvDate(value = "yyyy-MM-dd'T'HH:mm:ssX")
-    private Instant endTime;
-    @CsvBindByName(column = "type")
-    private String type;
-    @CsvBindByName(column = "host")
-    private String host;
-    @CsvBindByName(column = "room")
-    private String room;
+
+    // nullable
+    @CsvBindByName(column = "parent_event_id")
+    private Long parentEventId;
+
+    // REQUIRED
     @CsvBindByName(column = "venue_id")
     private Long venueId;
+
+    // nullable
+    @CsvBindByName(column = "room_id")
+    private Long roomId;
+
+    @CsvBindByName(column = "title")
+    private String title;
+
+    @CsvBindByName(column = "description")
+    private String description;
+
+    @CsvBindByName(column = "background_url")
+    private String backgroundUrl;
+
+    // local calendar times (no zone)
+    @CsvCustomBindByName(column = "start_time_local", converter = LocalDateTimeConverter.class)
+    private LocalDateTime startTimeLocal;
+
+    @CsvCustomBindByName(column = "end_time_local", converter = LocalDateTimeConverter.class)
+    private LocalDateTime endTimeLocal;
+
+    // UTC instants
+    @CsvCustomBindByName(column = "start_time_utc", converter = InstantConverter.class)
+    private Instant startTimeUtc;
+
+    @CsvCustomBindByName(column = "end_time_utc", converter = InstantConverter.class)
+    private Instant endTimeUtc;
+
+    @CsvBindByName(column = "timezone")
+    private String timezone;
+
+    @CsvBindByName(column = "offset_minutes")
+    private Integer offsetMinutes;
+
+    // getters & setters …
 }

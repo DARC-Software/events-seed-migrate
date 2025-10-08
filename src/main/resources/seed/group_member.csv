@@ -1,0 +1,13 @@
+groupId,memberId,role,sortOrder
+13,9,Vocal,0
+13,2,Drums,1
+13,7,DJ,2
+14,6,Keys,0
+14,10,Vocal,1
+14,4,Vocal,2
+15,5,Vocal,0
+15,2,MC,1
+15,4,DJ,2
+16,11,DJ,0
+16,6,DJ,1
+16,3,Guitar,2

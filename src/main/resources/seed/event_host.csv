@@ -1,0 +1,41 @@
+eventId,partyId,role,sortOrder
+1,15,Opening Act,0
+1,7,MC,1
+2,11,Guest,0
+2,4,Guest,1
+3,13,MC,0
+3,6,MC,1
+4,13,Guest,0
+4,7,Opening Act,1
+5,14,Guest,0
+5,3,Headliner,1
+6,12,MC,0
+6,13,Headliner,1
+7,8,Headliner,0
+7,15,Headliner,1
+8,14,MC,0
+8,4,Opening Act,1
+9,1,MC,0
+9,10,MC,1
+10,16,MC,0
+10,4,Guest,1
+11,15,Headliner,0
+11,14,Headliner,1
+12,6,Guest,0
+12,5,MC,1
+13,8,Guest,0
+13,3,Guest,1
+14,10,Guest,0
+14,7,MC,1
+15,16,MC,0
+15,9,Headliner,1
+16,4,MC,0
+16,15,Headliner,1
+17,13,Opening Act,0
+17,3,Guest,1
+18,7,Opening Act,0
+18,9,MC,1
+19,1,Opening Act,0
+19,11,Headliner,1
+20,11,Opening Act,0
+20,4,Guest,1
